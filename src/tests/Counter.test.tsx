@@ -10,3 +10,8 @@ test("shows the increase button", () => {
     }),
   ).toBeInTheDocument();
 });
+
+test("decrease test button", () => {
+  render(<Counter />);
+  expect(screen.getByRole("button", { name: "decrease" })).toBeInTheDocument();
+});

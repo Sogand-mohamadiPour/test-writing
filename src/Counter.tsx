@@ -7,8 +7,9 @@ function Counter() {
     <div>
       <span>{count}</span>
       <button onClick={() => setCount(count + 1)}>Increase</button>
+      <button onClick={() => setCount(count - 1)}>decrease</button>
     </div>
   );
 }
 
-export default Counter
+export default Counter;
