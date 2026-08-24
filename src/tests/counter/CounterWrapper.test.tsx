@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { test, expect } from "vitest";
-import CounterWrapper from "../CounterWrapper";
+import CounterWrapper from "../../CounterWrapper";
 
 test("update the display count when the counter is clicked", async () => {
     render(<CounterWrapper />);

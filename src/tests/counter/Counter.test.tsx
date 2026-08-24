@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { test, expect } from "vitest";
-import Counter from "../Counter";
+import Counter from "../../Counter";
 
 test("increase display", () => {
 
