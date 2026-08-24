@@ -1,15 +1,34 @@
 import { useState } from "react";
 
-function Counter() {
+type CounterDisplayProps = {
+  onCountChange: (count: number) => void;
+};
+
+export default function CounterDisplay({ onCountChange }: CounterDisplayProps) {
   const [count, setCount] = useState(0);
 
+  function increase() {
+    const newCount = count + 1;
+
+    setCount(newCount);
+    onCountChange(newCount);
+  }
+
+  function decrease() {
+    const newCount = count - 1;
+
+    setCount(newCount);
+    onCountChange(newCount);
+  }
+
   return (
-    <div>
-      <span>{count}</span>
-      <button onClick={() => setCount(count + 1)}>Increase</button>
-      <button onClick={() => setCount(count - 1)}>decrease</button>
-    </div>
+    <>
+      <button onClick={increase}>
+        Increase
+      </button>
+      <button onClick={decrease}>
+        Decrease
+      </button>
+    </>
   );
 }
-
-export default Counter;

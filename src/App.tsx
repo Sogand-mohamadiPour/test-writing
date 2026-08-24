@@ -1,11 +1,14 @@
+import { useState } from "react";
 import Counter from "./Counter";
+import CounterDisplay from "./CounterDisplay";
 
-function App() {
+export default function App() {
+  const [count, setCount] = useState(0);
+
   return (
-    <>
-      <Counter />
-    </>
+    <div>
+      <Counter onCountChange={setCount} />
+      <CounterDisplay count={count} />
+    </div>
   );
 }
-
-export default App;
