@@ -1,7 +1,7 @@
 import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
-    testDir: "./e2e",
+    testDir: "./src/tests/shopping-cart",
 
     use: {
         baseURL: "http://localhost:5173",
